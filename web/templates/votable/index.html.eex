@@ -1,0 +1,30 @@
+<h2>Listing votables</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Gathering</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for votable <- @votables do %>
+    <tr>
+      <td><%= votable.name %></td>
+      <td><%= votable.description %></td>
+      <td><%= votable.gathering_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: votable_path(@conn, :show, votable), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: votable_path(@conn, :edit, votable), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: votable_path(@conn, :delete, votable), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New votable", to: votable_path(@conn, :new) %>

@@ -1,0 +1,23 @@
+<h2>Show votable</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @votable.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @votable.description %>
+  </li>
+
+  <li>
+    <strong>Gathering:</strong>
+    <%= @votable.gathering_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: votable_path(@conn, :edit, @votable) %>
+<%= link "Back", to: votable_path(@conn, :index) %>

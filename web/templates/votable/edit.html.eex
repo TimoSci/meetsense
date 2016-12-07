@@ -1,0 +1,6 @@
+<h2>Edit votable</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: votable_path(@conn, :update, @votable) %>
+
+<%= link "Back", to: votable_path(@conn, :index) %>
