@@ -5,6 +5,7 @@ defmodule Meetsense.Votable do
     field :name, :string
     field :description, :string
     belongs_to :gathering, Meetsense.Gathering
+    has_many :votes, Meetsense.Vote
 
     timestamps()
   end
