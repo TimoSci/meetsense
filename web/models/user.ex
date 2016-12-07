@@ -3,6 +3,8 @@ defmodule Meetsense.User do
 
   schema "users" do
     field :name, :string
+    has_many :votes, Meetsense.Vote
+    has_many :user_gatherings, Meetsense.UserGathering
 
     timestamps()
   end
