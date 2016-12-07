@@ -1,9 +1,10 @@
+
 defmodule Meetsense.VoteTest do
   use Meetsense.ModelCase
 
   alias Meetsense.Vote
 
-  @valid_attrs %{}
+  @valid_attrs %{value: 1}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
