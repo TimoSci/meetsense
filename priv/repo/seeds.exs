@@ -9,3 +9,19 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Meetsense.Repo
+alias Meetsense.User
+alias Meetsense.UserGathering
+alias Meetsense.Gathering
+alias Meetsense.Votable
+alias Meetsense.Vote
+
+Repo.insert!(%User {name: 'timo'})
+Repo.insert!(%User {name: 'josua'})
+Repo.insert!(%User {name: 'code monkey'})
+
+Repo.insert!(%Gathering {name: 'Bowling'})
+Repo.insert!(%Gathering {name: 'Bowling'})
+Repo.insert!(%Gathering {name: 'Bowling'})
+
