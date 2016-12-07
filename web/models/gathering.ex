@@ -4,7 +4,7 @@ defmodule Meetsense.Gathering do
   schema "gatherings" do
     field :name, :string
     has_many :user_gatherings, Meetsense.UserGathering
-    has_many :votables, Meetsense.Votables
+    has_many :votables, Meetsense.Votable
 
     timestamps()
   end
