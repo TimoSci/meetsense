@@ -2,7 +2,7 @@ defmodule Meetsense.Vote do
   use Meetsense.Web, :model
 
   schema "votes" do
-      field :value, :integer
+    field :value, :integer
     belongs_to :user, Meetsense.User
     belongs_to :votable, Meetsense.Votable
 
