@@ -1,0 +1,26 @@
+<h2>Listing gatherings</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for gathering <- @gatherings do %>
+    <tr>
+      <td><%= gathering.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: gathering_path(@conn, :show, gathering), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: gathering_path(@conn, :edit, gathering), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: gathering_path(@conn, :delete, gathering), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New gathering", to: gathering_path(@conn, :new) %>

@@ -18,7 +18,7 @@ defmodule Meetsense.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
-
+    resources "/gatherings", GatheringController
   end
 
   # Other scopes may use custom stacks.

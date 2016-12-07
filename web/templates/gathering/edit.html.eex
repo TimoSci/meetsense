@@ -1,0 +1,6 @@
+<h2>Edit gathering</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: gathering_path(@conn, :update, @gathering) %>
+
+<%= link "Back", to: gathering_path(@conn, :index) %>

@@ -1,0 +1,13 @@
+<h2>Show gathering</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @gathering.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: gathering_path(@conn, :edit, @gathering) %>
+<%= link "Back", to: gathering_path(@conn, :index) %>
