@@ -5,6 +5,7 @@ defmodule Meetsense.User do
     field :name, :string
     has_many :votes, Meetsense.Vote
     has_many :user_gatherings, Meetsense.UserGathering
+    many_to_many :gatherings, Meetsense.Gathering, join_through: "user_gatherings"
 
     timestamps()
   end
