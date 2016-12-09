@@ -17,6 +17,7 @@ defmodule Meetsense.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/:gathering_id", PageController, :index
     resources "/users", UserController
     resources "/gatherings", GatheringController
     resources "/voteables", VotableController
